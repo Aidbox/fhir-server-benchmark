@@ -1,4 +1,4 @@
-# FHIR sever benchmark tool
+# FHIR server benchmark tool
 
 FHIR server performance and load testing tool.
 
