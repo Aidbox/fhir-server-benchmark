@@ -48,12 +48,24 @@ xk6 build --with github.com/oleiade/xk6-kv
 ## Run test
 
 ```bash
-mkdir bin
-cd bin
-./k6 run ../test/crud.js \
-     --tag runid=RUN_1 \
-     --tag suite=CRUD \
-     --env BASE_URL='https://fhir.server.org/fhir' \
-     --env AUTH_USER='_user_' \
-     --env AUTH_PASSWORD='_password_'
+k6 run test/crud.js \
+  --tag runid=RUNID_001 \
+  --tag suite=CRUD \
+  --env BASE_URL='https://fhir.server.org/fhir' \
+  --env AUTH_USER='_user_' \
+  --env AUTH_PASSWORD='_password_'
+
+k6 run test/validate.js \
+  --tag runid=RUNID_001 \
+  --tag suite=VALIDATE \
+  --env BASE_URL='https://fhir.server.org/fhir' \
+  --env AUTH_USER='_user_' \
+  --env AUTH_PASSWORD='_password_'
+
+k6 run test/search.js \
+  --tag runid=RUNID_001 \
+  --tag suite=SEARCH \
+  --env BASE_URL='https://fhir.server.org/fhir' \
+  --env AUTH_USER='_user_' \
+  --env AUTH_PASSWORD='_password_'
 ```
