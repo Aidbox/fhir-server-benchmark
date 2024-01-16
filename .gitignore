@@ -1,0 +1,9 @@
+.idea
+bin
+*/#*
+#*
+.lsp
+.clj-kondo
+.pnpm-store
+.DS_Store
+cli/report.pdf
